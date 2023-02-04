@@ -9,3 +9,14 @@ variable "vpc_cidr_block" {
     description = "CIDR block for VPN"
   
 }
+
+variable "subnet_name1" {
+    type = string
+    description = "Name for subnet number one"
+}
+
+variable "subnet1_cidr_block" {
+    type = string
+    description = "CIDR block for subnet 1"
+  
+}
