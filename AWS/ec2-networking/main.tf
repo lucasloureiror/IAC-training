@@ -15,3 +15,16 @@ module "subnet" {
     module_vpc_id = module.vpc.vpc_id
     module_boolean_public_subnet = 1
 }
+
+module "security_group" {
+    source = "./modules/security-group"
+    module_vpc_id = module.vpc.vpc_id
+    module_security_group_name = var.security1_group_name
+    module_ingress_protocol = var.ssh_ingress_protocol
+    module_ingress_port = var.ssh_ingress_port
+    module_ingress_cidr_block = var.allow_all_cidr_block
+    module_security_group_description = var.ssh_security_group_description
+    module_egress_cidr_block = var.allow_all_cidr_block
+    module_egress_port = var.allow_all_egress_port
+    module_egress_protocol = var.allow_all_egress_protocol
+}

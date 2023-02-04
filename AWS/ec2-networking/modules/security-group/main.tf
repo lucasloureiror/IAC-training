@@ -4,7 +4,7 @@ resource "aws_security_group" "security_group" {
     vpc_id = var.module_vpc_id
 
     ingress {
-        description = var.module_ingress_description
+        description = "Rules for ingress"
         from_port = var.module_ingress_port
         to_port = var.module_ingress_port
         protocol = var.module_ingress_protocol
@@ -12,7 +12,7 @@ resource "aws_security_group" "security_group" {
     }
 
     egress {
-        description = var.module_egress_description
+        description = "Rules for egress"
         from_port = var.module_egress_port
         to_port = var.module_egress_port
         protocol = var.module_egress_protocol

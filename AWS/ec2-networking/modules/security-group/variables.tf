@@ -1,8 +1,3 @@
-variable "security_group_name" {
-    type = string
-    description = "Name for security group" 
-}
-
 variable "module_vpc_id" {
     type = string
     description = "VPC id"
@@ -49,12 +44,3 @@ variable "module_egress_protocol" {
     description = "Egress protocol type"
 }
 
-variable "module_ingress_description" {
-    type = string
-    description = "Ingress security group description"
-}
-
-variable "module_egress_description" {
-    type = string
-    description = "Egress security group description"
-}
