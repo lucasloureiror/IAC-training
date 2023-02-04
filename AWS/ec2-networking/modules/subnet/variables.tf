@@ -4,7 +4,7 @@ variable "module_subnet_cidr_block" {
 }
 
 variable "module_boolean_public_subnet" {
-    type = number
+    type = bool
     description = "Boolean to check if the subnet is public" 
 }
 
