@@ -76,4 +76,42 @@ variable "ip_private_instance" {
   description = "Private IP for the EC2 instance in the private subnet"
 }
 
+variable "subnet2_name" {
+  type        = string
+  description = "Name for the second subnet"
+}
+
+variable "subnet2_cidr_block" {
+  type        = string
+  description = "Cidr block for the second subnet"
+}
+
+variable "security_group2_name" {
+  type        = string
+  description = "Security group 2 name"
+}
+
+variable "icmp_security_group_description" {
+  type        = string
+  description = "Security group description for ICMP"
+}
+
+variable "icmp_ingress_protocol" {
+  type        = string
+  description = "Protocol for ICMP"
+
+}
+
+variable "instance1_name" {
+  type        = string
+  description = "Instance one name"
+
+}
+
+variable "instance2_name" {
+  type        = string
+  description = "Instance one name"
+
+}
+
 

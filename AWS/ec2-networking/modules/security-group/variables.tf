@@ -13,9 +13,14 @@ variable "module_egress_cidr_block" {
     description = "List for egress cidr block"
 }
 
-variable "module_ingress_port" {
+variable "module_ingress_to_port" {
     type = number
-    description = "Ingress port number"
+    description = "Ingress to port number"
+}
+
+variable "module_ingress_from_port" {
+    type = number
+    description = "Ingress from port number"
 }
 
 variable "module_egress_port" {

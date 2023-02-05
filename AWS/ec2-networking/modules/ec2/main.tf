@@ -5,6 +5,9 @@ resource "aws_instance" "instance" {
       network_interface_id = aws_network_interface.interface.id
       device_index         = 0
     }
+    tags = {
+      Name = var.module_instance_name
+    }
 }
 
 resource "aws_network_interface" "interface" {

@@ -5,8 +5,8 @@ resource "aws_security_group" "security_group" {
 
     ingress {
         description = "Rules for ingress"
-        from_port = var.module_ingress_port
-        to_port = var.module_ingress_port
+        from_port = var.module_ingress_from_port
+        to_port = var.module_ingress_to_port
         protocol = var.module_ingress_protocol
         cidr_blocks = var.module_ingress_cidr_block
     }

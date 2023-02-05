@@ -11,5 +11,10 @@ variable "module_private_ip_list" {
 variable "module_security_group_id" {
     type = list(string)
     description = "Security group ID"
+}
+
+variable "module_instance_name" {
+    type = string
+    description = "Name for EC2 Instance"
   
 }
