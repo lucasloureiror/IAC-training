@@ -1,2 +1,3 @@
 # IAC-training
-Repo for training IAC
+
+Repo for training Infrastructure as Code with Terraform.
