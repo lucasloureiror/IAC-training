@@ -18,7 +18,7 @@ resource "aws_lb" "lb" {
     name = "lucas-lb"
     load_balancer_type = "application"
     internal = false
-    subnets = [aws_subnet.subnet.id]
+    subnets = [aws_subnet.subnet.id, aws_subnet.subnet2.id]
     security_groups = [aws_security_group.lb_sg.id]
   
 }

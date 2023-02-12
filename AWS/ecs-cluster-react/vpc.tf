@@ -9,6 +9,18 @@ resource "aws_vpc" "vpc" {
 resource "aws_subnet" "subnet" {
     cidr_block = "10.10.0.0/24"
     vpc_id = aws_vpc.vpc.id
+    availability_zone = "us-east-1a"
+    map_public_ip_on_launch = true
+
+    tags = {
+      Name = "Subnet Lucas"
+    }
+}
+
+resource "aws_subnet" "subnet2" {
+    cidr_block = "10.10.1.0/24"
+    availability_zone = "us-east-1b"
+    vpc_id = aws_vpc.vpc.id
     map_public_ip_on_launch = true
 
     tags = {
@@ -36,8 +48,7 @@ resource "aws_route_table" "route" {
 }
 
 resource "aws_route_table_association" "association" {
-    subnet_id = aws_subnet.subnet.id
-    gateway_id = aws_internet_gateway.igw.id
+   subnet_id = aws_subnet.subnet.id
     route_table_id = aws_route_table.route.id
   
 }

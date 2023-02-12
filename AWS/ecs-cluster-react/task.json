@@ -1,0 +1,14 @@
+[
+    {
+      "name": "lucas-container",
+      "image": "464246926707.dkr.ecr.us-east-1.amazonaws.com/lucas:nginx",
+      "cpu": 512,
+      "memory": 256,
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 80
+        }
+      ]
+    }
+]
